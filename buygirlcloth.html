@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>女装购买</title>
+		<meta charset = "utf-8"/>
+		<script type="text/javascript" src="JS/chenhan.js"></script>
+		<link rel="stylesheet" href="CSS/main.css" type="text/css"/>
+		<link rel="stylesheet" href="CSS/buy.css" type="text/css"/>
+	</head>
+
+	<body>
+		<div id="top">
+			<div id = "shangbiankuang">
+				<div class="top1"><a href="login.html"><span>登录&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a></div>
+				<div class="top1"><a href="sign.html"><span>注册</span></a></div>
+				<div class="top1"><a href="#"><span>订单追踪</span></a></div>
+				<div class="top1"><a href="#"><span>客服中心</span></a></div>
+			</div>
+			<div id="xiabiankuang">
+				<div id="logo"><img src="images/main/logo.png"></div>
+				<div id="kinds">
+					<a href="main.html"><div class="cool1"><span>首页</span></div></a>
+					<a href="男装.html"><div class="cool1"><span>男装</span></div></a>
+					<a href="女装.html"><div class="cool1"><span>女装</span></div></a>
+					<a href="#"><div class="cool1"><span>运动</span></div></a>
+				</div>			
+				<div class="container">
+    				<form action="" class="parent">
+        				<input type="text" class="search" placeholder="搜索">
+        				<input type="button" name="" id="" class="btn">
+    				</form>
+				</div>
+			</div>
+		</div>
+		<div id = "top2">	
+		</div>
+
+
+		<div id="body1" class="body1">
+			<div class="img1" id="img1">
+				<img src="images/女装1.png" class="bigpic" id="bigpic" />	
+				<div class="slider"id="slider"></div>
+			</div>
+
+			<div class="imgs"id="imgs">
+				<img src="images/女装1.png" id="biggest"class="biggest"/>
+			</div>
+
+				
+						
+			<ul class="littlepics" id="littlepics">
+				<li id="1"><img src="images/女装1.png" /></li>
+				<li id="2"><img src="images/女装2.png" /></li>
+				<li id="3"><img src="images/女装3.png" /></li>
+				<li id="4"><img src="images/女装4.png" /></li>
+			</ul>
+			<div class="describe" id="describe">
+				<h2>泰国潮牌仙女复古V领连衣裙显瘦气质度假沙滩裙法式镂空蕾丝长裙</h2></br>
+				<div style="text-align: center;">
+					原价：
+					<span style="text-decoration: line-through;">￥258.00</span></br></br>
+					<h2 style="color:red; ">现价：￥168.00</h2>
+				</div>
+				</br></br>
+				<div style="text-align: center;">````````````````````````````````````````````````````````````````````````````
+				</div>
+				<div style="text-align: center;">
+					尺码：
+					<select id = "spp">
+  						<option value ="S">S</option>
+ 						<option value ="L">L</option>
+  						<option value="XL">XL</option>
+ 						<option value="XXL">XXL</option>
+					</select>
+				</div>
+				<div style="text-align: center;margin-top: 40px;"> 
+					<a href=""><button id="buy"class="buy" onclick="sent();">立即购买</button></a>
+					<a href=""><button id="car"class="car" onclick="sent();">加入购物车</button></a>
+				</div>
+				
+			</div>
+			
+		</div>
+
+		
+
+		<div class="others" id="others"><img src="images/精品推荐.png" /></div>
+
+		<div id="body2" class="body2">
+			<div class="cloths"id="cloth1">
+				<img src="images/女装else1.png" class="else1"id="else1"  />
+				<div style="font-size:80%; margin-left:10px;">￥ 168.00</div>
+				<img src="images/评论.png" class="else2"id="else2" />
+			</div>
+			<div class="cloths"id="cloth2">
+				<img src="images/女装else2.png" class="else1"  />
+				<div style="font-size:80%; margin-left:10px;">￥ 168.00</div>
+				<img src="images/评论.png" class="else2" />
+			</div>
+			<div class="cloths"id="cloth3">
+				<img src="images/女装else3.png" class="else1"  />
+				<div style="font-size:80%; margin-left:10px;">￥ 168.00</div>
+				<img src="images/评论.png" class="else2" />
+			</div>
+			<div class="cloths"id="cloth4">
+				<img src="images/女装else4.png" class="else1"  />
+				<div style="font-size:80%; margin-left:10px;">￥ 168.00</div>
+				<img src="images/评论.png" class="else2" />
+			</div>	
+		</div>
+		<div id="under">
+			<p>
+				<a href="#" >首页</a>&nbsp;&nbsp;|&nbsp;
+				<a href="#" >工商代理</a>&nbsp;&nbsp;|&nbsp;
+				<a href="#" >财务代记账</a>&nbsp;&nbsp;|&nbsp;
+				<a href="#" >股权交易与变更</a>&nbsp;&nbsp;|&nbsp;
+				<a href="#" >企业贷款</a>&nbsp;&nbsp;|&nbsp;
+				<a href="#" >办公室租赁</a>&nbsp;&nbsp;|&nbsp;
+				<a href="#" >社保公积金代理</a>&nbsp;&nbsp;|&nbsp;
+				<a href="#" >法律服务</a>
+			</p>
+			<p>&nbsp;</p>
+			<p>&copy;&nbsp;2019-2020 315特卖有限公司 版权所有</p>
+		</div>
+		
+
+
+		<script type="text/javascript">
+			var navlist = document.getElementById('littlepics').children;
+			var bigpic = document.getElementById('bigpic');
+			var biggest = document.getElementById('biggest');
+			var slider = document.getElementById('slider');
+			var imgs =  document.getElementById('imgs');
+			var img1 =  document.getElementById('img1');
+			var cloth1 = document.getElementById('cloth1');
+			var cloth2 = document.getElementById('cloth2');
+			var cloth3 = document.getElementById('cloth3');
+			var cloth4 = document.getElementById('cloth4');
+			var car = document.getElementById('car');
+
+			//小图变大图
+			for(var i = 0;i < 4;i++){
+				navlist[i].idn = i;		
+				navlist[i].onmouseover = function(){
+					n = this.idn + 1;
+					for(var j = 0;j < 4;j++){
+						var m = document.getElementById(j+1);		
+						m.style.border = "solid 4px white";
+					}				
+					bigpic.setAttribute( "src" ,"images/女装"+n+".png");	
+					biggest.setAttribute( "src" ,"images/女装"+n+".png");
+					var n = document.getElementById(n);		
+					n.style.border = "solid 4px pink";
+				}
+			}
+			//放上去放大特效
+			function bigbig(x){
+				x.onmouseover = function(){
+					x.style.border = "solid 4px #F0F0F0";
+				}
+				x.onmouseout = function(){
+					x.style.border = "solid 4px white";
+				}
+			}
+			bigbig(cloth1);
+			bigbig(cloth2);
+			bigbig(cloth3);
+			bigbig(cloth4);
+		
+			
+			/*cloth1.onmouseover = function(){
+				cloths.style.border = "solid 4px #F0F0F0";
+			}
+			cloth1.onmouseout = function(){
+				cloths.style.border = "solid 4px white";
+			}*/
+			//放大镜
+			img1.onmouseover = function(){
+				slider.style.display = "block";
+				imgs.style.display = "block";
+			}
+			img1.onmouseout = function(){
+				slider.style.display = 'none';
+				imgs.style.display = "none";
+			}
+			img1.onmousemove = function(eva){
+				var ol = eva.clientX - body1.offsetLeft-100;
+				var ot = eva.clientY - body1.offsetTop-100;
+
+				ol = ol > 200?200:ol < 0?0:ol;
+				ot = ot > 325?325:ot < 0?0:ot;
+				slider.style.left = ol + 'px';
+				slider.style.top = ot + 'px';
+
+				var Bl = - (2*ol);
+				var Bt = - (2*ot);
+				biggest.style.left = Bl + 'px';
+				biggest.style.top = Bt + 'px';
+			}
+			function sent(){ 
+				var img = "images/女装1.png"
+				var name = "泰国潮牌仙女复古V领连衣裙显瘦气质度假沙滩裙法式镂空蕾丝长裙";
+				var price = 168.00;
+				var myselect = document.getElementById("spp");
+				var index = myselect.selectedIndex;
+				var size = myselect.options[index].value;
+				window.open("购物车.html?"+name+","+price+","+size+","+img);
+			}
+		</script>
+
+		
+	</body>
+</html>
