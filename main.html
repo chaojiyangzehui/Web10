@@ -1,0 +1,206 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>315特卖之家</title>
+	<link rel="stylesheet" href="CSS/main.css" type="text/css"/>
+	<script src="JS/chenhan.js"></script>
+	<script src="JS/animate.js"></script>
+</head>
+<body>
+	<div id="top">
+		<div id = "shangbiankuang">
+			<div class="top1"><a href="login.html"><span>登录&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a></div>
+			<div class="top1"><a href="sign.html"><span>注册</span></a></div>
+			<div class="top1"><a href="#"><span>订单追踪</span></a></div>
+			<div class="top1"><a href="#"><span>客服中心</span></a></div>
+		</div>
+		<div id="xiabiankuang">
+			<div id="logo"><img src="images/main/logo.png"></div>
+			<div id="kinds">
+				<a href="main.html"><div class="cool1"><span>首页</span></div></a>
+				<a href="男装.html"><div class="cool1"><span>男装</span></div></a>
+				<a href="女装.html"><div class="cool1"><span>女装</span></div></a>
+				<a href="#"><div class="cool1"><span>运动</span></div></a>
+			</div>			
+			<div class="container">
+    			<form action="" class="parent">
+        			<input type="text" class="search" placeholder="搜索">
+        			<input type="button" name="" id="" class="btn">
+    			</form>
+			</div>
+		</div>
+	</div>
+	<div id = "top2">
+		
+	</div>
+	<div id="mid">
+		<div class="box" id="box">
+            <div class="slider" id="slider">
+                <div class="slide"><img src="images/main/无情.jpg"></div>
+                <div class="slide"><img src= "images/main/f1.png"></div>
+                <div class="slide"><img src= "images/main/f2.png"></div>
+                <div class="slide"><img src= "images/main/f3.png"></div>
+                <div class="slide"><img src= "images/main/f4.png"></div>
+                <div class="slide"><img src= "images/main/无情.jpg"></div>
+                <div class="slide"><img src="images/main/f1.png"></div>
+            </div>
+            <span id="left">&lt;</span>
+            <span id="right">&gt;</span>
+            <ul class="nav" id="nav">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        
+    <script>
+       var box = document.getElementById('box');
+            var navlist = document.getElementById('nav').children;
+            var slider = document.getElementById('slider');
+            var left = document.getElementById('left');
+            var right = document.getElementById('right');    
+            var isMoving = false;
+            var m = 1;
+            var n = 1;
+            
+          
+            //滑动函数
+            function next(){                
+                if(!isMoving){
+                    isMoving = true;
+                    n++;
+                    navchange();
+                    animate(slider,{left:-1200*n},function(){
+                        if(n == 6){
+                            slider.style.left = "-1200px";
+                            n = 1;
+                        }
+                        isMoving = false;
+                    });
+                }
+                
+            }
+            
+            function pre(){
+                if(!isMoving){
+                    isMoving = true;
+                    n--;
+                    navchange();
+                    animate(slider,{left:-1200*n},function(){
+                        if(n == 0){
+                            slider.style.left = "-6000px";
+                            n = 5;
+                        }
+                        isMoving = false;
+                    });
+                }
+            }
+            var timer = setInterval(next,2000);
+            //鼠标
+            box.onmouseover = function(){
+                animate(left,{opacity:100});
+                animate(right,{opacity:100});
+                clearInterval(timer);
+            }
+            box.onmouseout = function(){
+                animate(left,{opacity:0});
+                animate(right,{opacity:0});
+                timer = setInterval(next,2000);
+            }
+            //箭头
+            right.onclick = next;
+            left.onclick = pre;
+            //小按钮
+            for(var i = 0;i < 5;i++){
+                navlist[i].idn = i;//小按钮赋值
+                navlist[i].onclick = function(){
+                    n = this.idn + 1;
+                    navchange();
+                    animate(slider,{left:-1200*n});
+                }
+            }
+            //小按钮背景色
+            function navchange(){
+                for(var i = 0;i < 5;i++){
+                    navlist[i].className = '';
+                }
+                if(n == 6){
+                    navlist[0].className = 'active';
+                }else if(n ==0){
+                    navlist[4].className = 'active';
+                }else{
+                    navlist[n-1].className = 'active';
+                }           
+            }
+
+
+
+        
+        
+    </script>
+		
+		
+	</div>
+			
+		<div class="huodong" style="margin-bottom:50px;margin-top: 90px;">
+			<img src="images/main/1920-720.jpg">
+			
+		</div>
+		<div class="huodong">
+			<img src= "images/main/1920-5200.jpg">
+			<div class="cool2">
+				<a href="男装.html">精品男装专区</a>
+			</div>
+		</div>
+		<div class="huodong">
+			<img src= "images/main/1920-520.jpg">
+			<div class="cool2">
+				<a href="女装.html">精品女装专区</a>
+			</div>
+		</div>
+		<div class="right">
+			<div id="what">
+				<img src="images/main/潮流.png">
+			</div>
+			
+				<ul id="list">
+					<li>
+						<img src="images/main/1.jpg"  />
+					</li>
+					<li>
+						<img src="images/main/2.jpg"/></li>
+					<li>
+						<img src="images/main/3.jpg"/></li>
+					<li>
+						<img src="images/main/4.jpg"/></li>
+					<li>
+						<img src="images/main/5.jpg"/></li>
+					<li>
+						<img src="images/main/6.jpg"/></li>
+					<li>
+						<img src="images/main/7.jpg"/></li>
+					<li>
+						<img src="images/main/8.jpg"/></li>
+				</ul>
+			</div>
+	
+	
+	<div id="under">
+		<p>
+				<a href="#" >首页</a>&nbsp;&nbsp;|&nbsp;
+				<a href="#" >工商代理</a>&nbsp;&nbsp;|&nbsp;
+				<a href="#" >财务代记账</a>&nbsp;&nbsp;|&nbsp;
+				<a href="#" >股权交易与变更</a>&nbsp;&nbsp;|&nbsp;
+				<a href="#" >企业贷款</a>&nbsp;&nbsp;|&nbsp;
+				<a href="#" >办公室租赁</a>&nbsp;&nbsp;|&nbsp;
+				<a href="#" >社保公积金代理</a>&nbsp;&nbsp;|&nbsp;
+				<a href="#" >法律服务</a>
+		</p>
+		<p>&nbsp;</p>
+		<p>&copy;&nbsp;2019-2020 315特卖有限公司 版权所有</p>
+	</div>
+</body>
+</html>
