@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录</title>
+	<link rel="stylesheet" href="CSS/main.css" type="text/css"/>
+	<script src="JS/chenhan.js"></script>
+	<script src="JS/animate.js"></script>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.box1{
+			border-radius: 10px;
+			width: 300px;
+			height: 500px;
+			padding: 0 20px;
+			border: 2px solid black;
+			margin: 50px auto;
+		}
+		.tit{
+			margin-top: 5px;
+			margin-bottom: 30px;
+		}
+		.brand{
+			color: black;
+			font-size: 18px;
+			margin-right: 20px;
+		}
+		.inp{
+			width: 100%;
+			height: 40px;
+			text-indent: 8px;
+		}
+		.notice{
+			height: 30px;
+			line-height: 30px;
+			font-size: 12px;
+		}
+
+		.code{
+			width: 60%;
+		}
+		.getCode{
+			width: 35%;
+			height: 44px;
+			float: right;
+			border: none;
+			background-color: #eee;
+		}
+		.codeImg{
+			height: 40px;
+		}
+		.btn1{
+			background: black;
+			width: 100%;
+			height: 40px;
+			border: none;
+			margin-top: 8px;
+			color: #fff;
+			border-radius: 3px;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="top">
+		<div id = "shangbiankuang">
+			<div class="top1"><a href="login.html"><span>登录&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a></div>
+			<div class="top1"><a href="sign.html"><span>注册</span></a></div>
+			<div class="top1"><a href="#"><span>订单追踪</span></a></div>
+			<div class="top1"><a href="#"><span>客服中心</span></a></div>
+		</div>
+		<div id="xiabiankuang">
+			<div id="logo"><img src="images/main/logo.png"></div>
+			<div id="kinds">
+				<a href="main.html"><div class="cool1"><span>首页</span></div></a>
+				<a href="男装.html"><div class="cool1"><span>男装</span></div></a>
+				<a href="女装.html"><div class="cool1"><span>女装</span></div></a>
+				<a href="#"><div class="cool1"><span>运动</span></div></a>
+			</div>			
+			<div class="container">
+    			<form action="" class="parent">
+        			<input type="text" class="search" placeholder="搜索">
+        			<input type="button" name="" id="" class="btn">
+    			</form>
+			</div>
+		</div>
+	</div>
+	<div id = "top2">
+		
+	</div>
+	<div class="box1">
+		<p class="tit">
+			<span class="brand">315特卖</span>
+			<span>用户注册</span>
+		</p>
+
+		<input class="inp" type="text" placeholder="用户名">
+		<p class="notice"></p>
+
+		<input class="inp" type="password" placeholder="密码">
+		<p class="notice"></p>
+		
+		<input class="inp" type="password" placeholder="确认密码">
+		<p class="notice"></p>
+		
+
+		<div>
+			<input class="inp code" type="text" placeholder="验证码">
+			<button class="getCode" onClick="getPic()">获取验证码</button>
+		</div>
+		<div class="codeImg">
+			<!-- 点击‘获取验证码’按钮后，在此处添加 验证码图片的img标签 -->
+		</div>
+		<p class="notice"></p>
+
+		<button class="btn1" onClick="judge()">注册</button>
+	</div>
+	<script>
+		var inp = document.getElementsByClassName("inp")[0];
+		inp.onfocus = function(){
+			var notice = document.getElementsByClassName("notice")[0];
+			notice.innerText = "请输入4-10位用户名";
+		}
+		inp.onblur = function(){
+			var notice = document.getElementsByClassName("notice")[0];
+			notice.innerHTML = "";
+		}
+		var inp2 = document.getElementsByClassName("inp")[1];
+		inp2.onfocus = function(){
+			var notice = document.getElementsByClassName("notice")[1];
+			notice.innerText = "请输入6-12位密码";
+		}
+		inp2.onblur = function(){
+			var notice = document.getElementsByClassName("notice")[1];
+			notice.innerHTML = "";
+		}
+		
+		var inp3 = document.getElementsByClassName("inp")[2];
+		inp3.onfocus = function(){
+			var notice = document.getElementsByClassName("notice")[2];
+			notice.innerText = "请再次输入6-12位密码";
+		}
+		inp3.onblur = function(){
+			var notice = document.getElementsByClassName("notice")[2];
+			notice.innerHTML = "";
+		}
+		
+		function getPic(){
+			var arr=['images/zAZfB.jpg','images/ZEhUN.jpg','images/zFC9H.jpg','images/zhWY9.jpg','images/Zin4c.jpg','images/ZITGj.jpg','images/zJ6iV.jpg','images/zjsKP.jpg','images/ZKc9S.jpg','images/zKDXU.jpg'];
+			var i = parseInt(Math.random()*10);
+			var Pic = document.getElementsByClassName("codeImg")[0];
+			Pic.innerHTML = '<img src="'+arr[i]+'"/>';
+		}
+		function judge(){
+			var name = document.getElementsByClassName("inp")[0].value;
+			if(name.length<4||name.length>10){
+				var wrong1 = document.getElementsByClassName("notice")[0];
+				wrong1.innerText = "用户名位数不对";
+			}
+			
+			var name1 = document.getElementsByClassName("inp")[1].value;
+			if(name1.length<6||name1.length>12){
+				var wrong2 = document.getElementsByClassName("notice")[1];
+				wrong2.innerText = "密码位数不对";
+			}
+			
+			var name2 = document.getElementsByClassName("inp")[2].value;
+			if(name2.length<6||name2.length>12){
+				var wrong2 = document.getElementsByClassName("notice")[2];
+				wrong2.innerText = "密码位数不对";
+			}
+			
+			var name3 = document.getElementsByClassName("inp")[2].value;
+			if(name3!=name1){
+				var wrong2 = document.getElementsByClassName("notice")[2];
+				wrong2.innerText = "两次密码不一致";
+			}
+			
+			var code = document.getElementsByClassName("codeImg")[0].innerHTML;
+			
+			var code1 = code.substr(17,5);
+			
+			var name3 = document.getElementsByClassName("inp code")[0].value;
+		
+			if(code1 != name3){
+				var wrong3 = document.getElementsByClassName("notice")[3];
+				wrong3.innerText = "验证码错误";
+			}
+			
+			if(code1 == name3 && name1.length>6 && name1.length<12 && name.length>4 && name.length<10){
+				alert("注册成功");
+			}
+		}
+		
+		
+	</script>
+</body>
+</html>
