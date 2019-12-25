@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<head>
+	<title>购物车</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="CSS/main.css" type="text/css"/>
+	<style type="text/css">
+		body{
+			background-repeat: no-repeat;
+  			background-size: cover;
+		}
+		table{
+			border: 1px solid black;
+			text-align: center;
+			margin: 50px auto;
+			position: relative;
+			width: 1200px;
+		}
+		td{
+			border: 1px solid black;
+			width: 100px;
+			height: 30px;
+		}
+		#buy{
+			font-family: KaiTi;
+			padding: 5px 10px;
+			position: relative;
+			left: 1300px;
+			bottom: 50px;
+			color: white;
+			background-color:darkred;
+			font-size: 20px;
+			cursor:pointer;
+			border: none;
+		}
+		#h{
+			text-align: center;
+			margin-top: 300px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		td{
+			font-family: KaiTi;
+		}
+	</style>
+</head>
+<body>
+	<div id="top">
+		<div id = "shangbiankuang">
+			<div class="top1"><a href="login.html"><span>登录&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a></div>
+			<div class="top1"><a href="sign.html"><span>注册</span></a></div>
+			<div class="top1"><a href="#"><span>订单追踪</span></a></div>
+			<div class="top1"><a href="#"><span>客服中心</span></a></div>
+		</div>
+		<div id="xiabiankuang">
+			<div id="logo"><img src="images/main/logo.png"></div>
+			<div id="kinds">
+				<a href="main.html"><div class="cool1"><span>首页</span></div></a>
+				<a href="男装.html"><div class="cool1"><span>男装</span></div></a>
+				<a href="女装.html"><div class="cool1"><span>女装</span></div></a>
+				<a href="#"><div class="cool1"><span>运动</span></div></a>
+			</div>			
+			<div class="container">
+    			<form action="" class="parent">
+        			<input type="text" class="search" placeholder="搜索">
+        			<input type="button" name="" id="" class="btn">
+    			</form>
+			</div>
+		</div>
+	</div>
+	<div id = "h"><h1>您的订单</h1></div>
+	<table class="car" cellspacing="0px">
+		<tr>
+			<td id="pic">商品信息</td>
+			<td id="name">品名</td>
+			<td id="size">商品参数</td>
+			<td id="price">单价</td>
+			<td id="number">数量</td>
+			<td id="total">金额</td> 
+			<td id="delet">操作</td>
+		</tr>
+	</table>
+	<a href="main.html"><button id = "buy">结算</button></a>
+	<div id="under">
+		<p>
+				<a href="#" >首页</a>&nbsp;&nbsp;|&nbsp;
+				<a href="#" >工商代理</a>&nbsp;&nbsp;|&nbsp;
+				<a href="#" >财务代记账</a>&nbsp;&nbsp;|&nbsp;
+				<a href="#" >股权交易与变更</a>&nbsp;&nbsp;|&nbsp;
+				<a href="#" >企业贷款</a>&nbsp;&nbsp;|&nbsp;
+				<a href="#" >办公室租赁</a>&nbsp;&nbsp;|&nbsp;
+				<a href="#" >社保公积金代理</a>&nbsp;&nbsp;|&nbsp;
+				<a href="#" >法律服务</a>
+		</p>
+		<p>&nbsp;</p>
+		<p>&copy;&nbsp;2019-2020 315特卖有限公司 版权所有</p>
+	</div>
+</body>
+	<script type="text/javascript">
+		window.onload= function(){
+			var table = document.getElementsByTagName('table')[0];
+			var tr = document.createElement("tr");
+			var pic = document.createElement("td");
+			var name = document.createElement("td");
+			var size = document.createElement("td");
+			var price = document.createElement("td");
+			var number = document.createElement("td");
+			var total = document.createElement("td");
+			var delet = document.createElement("td");
+			var de = document.createElement("button");
+
+			var num = 1;
+			var img = document.createElement("img");
+			img.src = decodeURIComponent(window.location.href.split("?")[1].split(",")[3]);
+			var add = document.createElement("button");
+			var sub = document.createElement("button");
+			var cur = document.createElement("span");
+			sub.innerText = "-";
+			add.innerText = "+";
+			cur.innerText = num;
+			name.innerText = decodeURIComponent(window.location.href.split("?")[1].split(",")[0]);
+			price.innerText = window.location.href.split("?")[1].split(",")[1];
+			total.innerText = num*price.innerText;
+			total.style.color = "red";
+			img.style.width = "90px";
+			img.style.height = "120px";
+			pic.appendChild(img);
+			number.appendChild(sub);
+			number.appendChild(cur);
+			number.appendChild(add);
+			size.innerText = window.location.href.split("?")[1].split(",")[2];
+			de.innerText = "移除";
+
+			delet.appendChild(de);
+			tr.appendChild(pic);
+			tr.appendChild(name);
+			tr.appendChild(size);
+			tr.appendChild(price);
+			tr.appendChild(number);
+			tr.appendChild(total);
+			tr.appendChild(delet);
+			table.appendChild(tr);
+
+			de.onclick = function(){
+				table.removeChild(tr);
+			}
+
+			function save(){
+				
+			}
+
+			add.onclick = function(){
+				num += 1;
+				cur.innerText = num;
+				total.innerText = num*price.innerText;
+			}	
+
+			sub.onclick = function(){
+				num -= 1;
+				if(num < 0){
+					num = 0;
+					cur.innerText = num;
+				}else{
+					cur.innerText = num;
+				}
+				total.innerText = num*price.innerText;
+			}
+		}
+		buy.onclick = function(){
+			alert("购买成功");
+		}
+	</script>
+</html>
