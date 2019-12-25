@@ -1,0 +1,239 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin: 0px;
+	padding: 0px;
+}
+ul,li{
+	list-style: none;
+}
+#what{
+	position: relative;
+	left: 450px;
+}
+.right{
+	border-radius: 18px;
+	margin: auto;
+	margin-bottom: 100px;
+	width: 1300px;
+	height: 850px;
+	position: relative;
+	top: 60px;
+	left: 5px;
+}
+.right>ul>li{
+	overflow: hidden;
+	width: 272px;
+	height: 293px;
+	margin-right: 37px;
+	margin-bottom: 20px;
+	text-align: center;
+	float: right;
+	text-align: center;
+	padding-top: 45px;
+	border-radius: 20px;
+}
+.right>ul>li>img:hover{
+	width:244px;
+	background: black;
+	opacity: 0.9;
+
+}
+
+div{
+    display:block;
+}
+ul,li{
+    list-style: none;
+}
+.box{
+	border-radius: 18px;
+    width:1200px;
+    height:382px;
+    border:none;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+	margin-bottom: 50px;
+	margin-top: 50px;
+}
+.slider{
+    width:8400px;
+    position: absolute;
+    left:-1200px;
+}
+.slide{
+    width:1200px;
+    position: hidden;
+    float:left;
+}
+.box>span{
+    display: block;
+    width:30px;
+    height:50px;
+	border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    top:175px;
+	color: aliceblue;
+    line-height: 50px;
+    background: rgb(255,0,0);
+    font-size: 30px;
+    position: absolute;
+    opacity: 0; 
+}
+#left{
+    left:30px;
+    background-color: black;
+}
+#right{
+    right:30px;
+    background-color: black;
+}
+.nav{
+    position: absolute;
+	top:330px;
+    left: 500px;
+}
+.nav>li{
+    float:left;
+    width:20px;
+    height:20px;
+    background: #ccc;
+    cursor:pointer;
+    margin:0 10px;
+    border-radius: 100%;
+}
+.nav .active{
+    background:black;
+}
+
+a{
+	text-decoration: none;
+	color:aliceblue;
+}
+#top2{
+	width: 100%;
+	height: 105px;
+	background: #000000;
+}
+#top{
+	overflow: hidden;
+	opacity: 0.8;
+	width: 100%;
+	height: 105px;
+	background: #000000;
+	position: fixed;
+	z-index: 99999;
+	top: 0px;
+}
+#shangbiankuang{
+	margin: auto;
+	width: 1200px;
+	height: 20px;
+}
+#xiabiankuang{
+	width:1500px;
+	height: 80px;
+	margin: auto;
+}
+.cool1:hover{
+	font-size: 25px;
+}
+.cool1{
+	width: 55px;
+	height: 50px;
+	color: aliceblue;
+	font-family: "宋体";
+	font-weight:bolder;
+	float: left;
+	margin-left: 100px;
+	position: relative;
+	top:50px;
+}
+#logo{
+
+	height: 80px;
+	margin-left: 120px;
+	float: left;
+}
+#kinds{
+	float: left;
+	width:750px;
+	height: 80px;
+}
+.top1{
+	text-align: right;
+	font-size: 13px;
+	height: 20px;
+	width: 100px;
+	float: right;
+}
+.container {
+	position: relative;
+	top:20px;
+	margin-left: 0px;
+    height: 60px;
+    width: 200px;
+	float: left;
+}
+.parent {
+    position: relative;
+}
+.search {
+    width: 300px;
+    height: 40px;
+    border-radius: 18px;
+    outline: none;
+    border: 1px solid #ccc;
+    padding-left: 20px;
+    position: absolute;
+}
+.btn {
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    background: url("cart.png") no-repeat;
+    top: 6px;
+    left: 283px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+#mid{
+	background: white;
+	
+}
+.huodong{
+
+	text-align: center;
+}
+.cool2{
+	
+	border-radius: 10px;
+	font-family: "宋体";
+	padding-top: 15px;
+	width: 150px;
+	height: 35px;
+	text-align: center;
+	background-color: black;
+	opacity: 0.7;
+	position: relative;
+	top:-150px;
+	margin: auto;
+}
+.cool2:hover{
+	opacity: 0.8;
+}
+
+#under{
+	position: relative;
+	top:50px;
+	padding-top: 50px;
+	text-align: center;
+	color: aliceblue;
+	font-family: "宋体";
+	width: 100%;
+	height: 100px;
+	background: #000000;
+}
